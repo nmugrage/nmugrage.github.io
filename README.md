@@ -2,4 +2,4 @@
 noah mugrage projects
 
 
-Pie Page
+Pi Page
