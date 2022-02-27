@@ -2,4 +2,4 @@
 noah mugrage projects
 
 
-Pi Page
+[Pi Page](/pipage/index.htm)
