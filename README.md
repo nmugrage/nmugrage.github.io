@@ -4,4 +4,4 @@ noah mugrage projects
 
 [Pi Page](/pipage/index.htm)
 
-[Gen Guts](/genguts/index.html)
+[Gen Guts](/genguts/index.htm)
