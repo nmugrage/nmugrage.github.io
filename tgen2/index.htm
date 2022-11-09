@@ -68,3 +68,65 @@ function getVerb(theWord) {
         resolve($.get('https://api.datamuse.com/words?rc=' + theWord + '&md=p'));
     });
 }
+function boot() {
+  var theList = document.getElementById("drList");
+  theResult = "";
+  selectedGenre = theList.options[theList.selectedIndex].text;
+  //
+  switch (selectedGenre) {
+      case "Horror":
+          getWordArray(randomFromArray(horrorArray)).then(function(obj){
+      randomizedLocale = (" " + RiTa.evaluate('(at|of)') + " " + randomFromArray(theStreets));
+              makeSentence(obj);
+          });
+          break;
+      case "Fantasy":
+    madeWord = "";
+    madeWord += getRi(3);
+    madeWord += getRi(2);
+    madeWord += getRi(2);
+      getWordArray(randomFromArray(fantasyArray)).then(function(obj){
+      randomizedLocale = (" of " + madeWord + " " + randomFromArray(magicalLocales));
+              makeSentence(obj);
+          });
+          break;
+      case "Science Fiction":
+    madeWord = "";
+    madeWord += getRi(3);
+    madeWord += getRi(2);
+    madeWord += getRi(2);
+      getWordArray(randomFromArray(scienceFictionArray)).then(function(obj){
+      randomizedLocale = (" of " + madeWord + " " + randomFromArray(sciFiLocales.concat(magicalLocales)));
+              makeSentence(obj);
+          });
+          break;
+      case "Literary":
+      getWordArray(randomFromArray(literaryArray)).then(function(obj){
+      randomizedLocale = (" " + RiTa.evaluate('(at|of)') + " " + randomFromArray(theStreets));
+              makeSentence(obj);
+          });
+          break;
+      case "Experimental":
+    madeWord = "";
+    madeWord += getRi(3);
+    madeWord += getRi(2);
+    madeWord += getRi(2);
+    getWordArray(RiTa.randomWord({ pos: "nn"})).then(function(obj){
+      randomizedLocale = (" " + madeWord);
+              makeSentence(obj);
+          });
+          break;
+      case "Crime":
+      getWordArray(randomFromArray(crimeArray)).then(function(obj){
+      randomizedLocale = (" " + RiTa.evaluate('(at|of)') + " " + randomFromArray(theStreets));
+              makeSentence(obj);
+          });
+          break;
+      case "Romance":
+    getWordArray(randomFromArray(romanceArray)).then(function(obj){
+      randomizedLocale = (" of the " + randomFromArray(magicalLocales));
+              makeSentence(obj);
+          });
+          break;
+  }
+  //
