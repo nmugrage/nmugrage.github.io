@@ -6,4 +6,4 @@ noah mugrage projects
 
 [Gen Guts](/genguts/index.htm)
 
-[tgen](/tgen2/index.htm)
+[tgen](/tgen/)
